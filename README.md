@@ -162,14 +162,3 @@ Reset your Minikube cluster:
 minikube delete
 minikube start --driver=docker --cpus=2 --memory=4g
 ```
-
-## Screenshots
-
-### Running Pods
-![Running Pods](screenshots/running-pods.png)
-
-### Successful Ingress Access
-![Successful Ingress Access](screenshots/ingress-access.png)
-
-### Service Communication Tests
-![Service Communication Tests](screenshots/service-communication.png)
