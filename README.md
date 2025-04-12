@@ -15,12 +15,16 @@ This project demonstrates deploying a microservices architecture on Kubernetes u
 ```bash
 minikube start --driver=docker --cpus=2 --memory=4g
 ```
+![image](https://github.com/user-attachments/assets/23f6cd1d-a623-439d-987b-d249d3559eeb)
+
 
 2. Enable the Ingress controller:
 
 ```bash
 minikube addons enable ingress
 ```
+![image](https://github.com/user-attachments/assets/2fb97a69-ffe6-48b7-ba26-95d275484ba5)
+
 
 3. Set your Docker environment to use Minikube's Docker daemon:
 
@@ -39,6 +43,9 @@ docker build -t your-registry/product-service:latest ./product-service
 docker build -t your-registry/order-service:latest ./order-service
 docker build -t your-registry/gateway-service:latest ./gateway-service
 ```
+Since we have already Build it ealier, we'll use those : 
+![image](https://github.com/user-attachments/assets/df053d0c-1485-4a6d-8608-9e89440ba816)
+
 
 ## Deployment Steps
 
@@ -48,6 +55,8 @@ docker build -t your-registry/gateway-service:latest ./gateway-service
 kubectl create namespace microservices
 kubectl config set-context --current --namespace=microservices
 ```
+![image](https://github.com/user-attachments/assets/d9994d19-68df-4f80-9640-dc9eaede0148)
+
 
 2. Apply all deployment configurations:
 
@@ -60,6 +69,16 @@ kubectl apply -f deployments/
 ```bash
 kubectl apply -f services/
 ```
+![image](https://github.com/user-attachments/assets/24295a71-dc8b-439c-9a25-841d9fa827a2)
+
+Port Forward and Test the services : 
+![image](https://github.com/user-attachments/assets/c759c4e1-ae35-423b-a43e-7ed0636c7a56)
+![image](https://github.com/user-attachments/assets/b9fafab4-72df-4272-a6e4-cc518b47e638)
+![image](https://github.com/user-attachments/assets/ec254d51-b6e5-45e7-a28f-8a54daf9c62c)
+
+![image](https://github.com/user-attachments/assets/84f43ab1-4e52-4a42-982e-3f6677104fad)
+![image](https://github.com/user-attachments/assets/0b0b5296-6063-453a-abb2-ac9431c1ad5e)
+
 
 4. Apply the Ingress configuration:
 
