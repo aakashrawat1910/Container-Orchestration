@@ -26,12 +26,6 @@ minikube addons enable ingress
 ![image](https://github.com/user-attachments/assets/2fb97a69-ffe6-48b7-ba26-95d275484ba5)
 
 
-3. Set your Docker environment to use Minikube's Docker daemon:
-
-```bash
-eval $(minikube docker-env)
-```
-
 ## Building the Docker Images
 
 If you need to build the Docker images locally:
@@ -44,6 +38,7 @@ docker build -t your-registry/order-service:latest ./order-service
 docker build -t your-registry/gateway-service:latest ./gateway-service
 ```
 Since we have already Build it ealier, we'll use those : 
+
 ![image](https://github.com/user-attachments/assets/df053d0c-1485-4a6d-8608-9e89440ba816)
 
 
